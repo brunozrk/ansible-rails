@@ -1,0 +1,28 @@
+# Application name
+app_name: app_name
+
+# Database
+db_username: db_username
+db_password: db_password
+
+# Secrets
+secret_key_base: Run 'rake secret'
+
+# Ruby
+ruby_url: http://apt.hellobits.com/hellobits.key
+ruby_repo: deb http://apt.hellobits.com/ trusty main
+ruby_version: ruby-2.1
+
+# Nginx
+nginx_url: http://nginx.org/keys/nginx_signing.key
+nginx_repo: deb http://nginx.org/packages/ubuntu/ trusty nginx
+nginx_port: 80
+nginx_hostname: localhost
+nginx_connections: 1024
+nginx_workers: 2
+nginx_user: www-data
+nginx_group: www-data
+
+# Unicorn
+unicorn_workers: 4
+unicorn_timeout: 15

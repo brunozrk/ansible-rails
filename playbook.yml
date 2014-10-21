@@ -1,0 +1,15 @@
+---
+- name: Production Environment
+  hosts: web
+  sudo: yes
+  vars_files:
+    - vars/defaults.yml
+
+  roles:
+    - common
+    - ruby
+    - mysql
+    - nginx
+    - unicorn
+    - upstart
+    - configs

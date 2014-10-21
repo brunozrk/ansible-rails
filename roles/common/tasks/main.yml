@@ -1,0 +1,29 @@
+- name: Update and cache apt-get
+  apt: update_cache=yes cache_valid_time=3600
+
+- name: Install common packages
+  apt: name={{item}} state=present
+  with_items:
+    - build-essential
+    - git
+    - curl
+    - libpq-dev
+    - libxml2
+    - libxml2-dev
+    - libxslt1-dev
+    - libyaml-dev
+    - vim
+    - nodejs
+
+- name: Create user for deploy
+  user: >
+    name=deploy
+    group=www-data
+    comment="Deploy user"
+    state=present
+
+- name: Add public key to authorized_keys
+  authorized_key: >
+    user=deploy
+    state=present
+    key="{{lookup('file', '~/.ssh/id_rsa.pub')}}"

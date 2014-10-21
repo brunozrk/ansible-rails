@@ -1,0 +1,24 @@
+- name: Create /var/www/{{ app_name }}/shared/config/ and set permissions
+  file: >
+    dest=/var/www/{{ app_name }}/shared/config/
+    state=directory
+    recurse=yes
+    owner=deploy
+    group=www-data
+    mode=774
+
+- name: Create database.yml
+  template: >
+    src=database.yml.j2
+    dest=/var/www/{{ app_name }}/shared/config/database.yml
+    owner=deploy
+    group=www-data
+    mode=660
+
+- name: Create secrets.yml
+  template: >
+    src=secrets.yml.j2
+    dest=/var/www/{{ app_name }}/shared/config/secrets.yml
+    owner=deploy
+    group=www-data
+    mode=660
