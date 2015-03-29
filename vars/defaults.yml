@@ -26,3 +26,6 @@ nginx_group: www-data
 # Unicorn
 unicorn_workers: 4
 unicorn_timeout: 15
+
+# Monit
+monit_time: 60
