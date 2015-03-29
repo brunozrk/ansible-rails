@@ -1,0 +1,20 @@
+---
+- name: Install monit
+  apt: name=monit update_cache=yes
+  tags:
+    - monit
+
+- name: Configure monit
+  template: >
+    src=monitrc.j2
+    dest=/etc/monit/monitrc
+  tags:
+    - monit
+
+- name: Add monit check rails app
+  template: >
+    src=monitapp.conf.j2
+    dest=/etc/monit/conf.d/{{app_name}}.conf
+  notify: restart monit
+  tags:
+    - monit

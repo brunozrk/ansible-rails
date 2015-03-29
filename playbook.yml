@@ -12,4 +12,5 @@
     - nginx
     - unicorn
     - upstart
+    - monit
     - configs
