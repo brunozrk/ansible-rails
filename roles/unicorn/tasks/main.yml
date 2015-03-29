@@ -1,8 +1,10 @@
 ---
 - name: Create dir unicorn config
   command: mkdir -p /etc/unicorn
+  tags: unicorn
 
 - name: Configure unicorn for project
   template: >
     src=unicorn.conf.j2
     dest=/etc/unicorn/{{ app_name }}.conf
+  tags: unicorn
