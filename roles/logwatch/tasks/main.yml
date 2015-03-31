@@ -1,3 +1,9 @@
+- name: Install logwatch
+  apt: "pkg={{item}} state=latest force=yes "
+  with_items:
+    - logwatch
+  tags: logwatch
+
 - name: Configure logwatch file
   template: >
     src=logwatch.conf.j2
