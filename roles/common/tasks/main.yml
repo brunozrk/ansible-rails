@@ -14,8 +14,6 @@
     - libyaml-dev
     - vim
     - nodejs
-    - unattended-upgrades
-    - logwatch
   tags: install_packages
 
 - name: Create user for deploy
