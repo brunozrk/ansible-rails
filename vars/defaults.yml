@@ -29,3 +29,7 @@ unicorn_timeout: 15
 
 # Monit
 monit_time: 60
+
+# Logwatch
+mail_from: mail@from.com
+mail_to: mail@to.com
