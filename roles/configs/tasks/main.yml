@@ -6,6 +6,8 @@
     owner=deploy
     group=www-data
     mode=774
+  tags:
+    - shared_configs
 
 - name: Create database.yml
   template: >
@@ -14,6 +16,8 @@
     owner=deploy
     group=www-data
     mode=660
+  tags:
+    - shared_configs
 
 - name: Create secrets.yml
   template: >
@@ -22,3 +26,5 @@
     owner=deploy
     group=www-data
     mode=660
+  tags:
+    - shared_configs
