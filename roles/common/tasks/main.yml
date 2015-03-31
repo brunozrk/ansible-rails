@@ -14,6 +14,7 @@
     - libyaml-dev
     - vim
     - nodejs
+    - unattended-upgrades
 
 - name: Create user for deploy
   user: >
