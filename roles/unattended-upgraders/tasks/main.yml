@@ -1,3 +1,9 @@
+- name: Install unattended-upgrades
+  apt: "pkg={{item}} state=latest force=yes "
+  with_items:
+    - unattended-upgrades
+  tags: unattended
+
 - name: Configure 50unattended-upgrades file
   template: >
     src=50unattended-upgrades.j2
