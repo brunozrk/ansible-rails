@@ -6,6 +6,8 @@ Clone o repositório
 
 Copie o arquivo /ansible/hosts.sample para /ansible/hosts, colocando as configurações do seu servidor.
 
+Configure as variáveis em `vars/defaults.yml`.
+
 Considerando que o Python esteja instalado. Instale o pip e o ansible
 
     sudo easy_install pip
