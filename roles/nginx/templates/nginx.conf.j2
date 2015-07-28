@@ -4,7 +4,7 @@ pid /var/run/nginx.pid;
 
 events {
   worker_connections  {{ nginx_connections }};
-  accept_mutex on; # change to on if worker_processes > 1
+  accept_mutex {% if nginx_workers > 1 %} on {% else %} off {% endif %}; # change to on if worker_processes > 1
   use epoll;
 }
 
