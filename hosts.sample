@@ -1,2 +1,2 @@
 [web]
-<hotsname or ip> ansible_connection=<connection type, ex: ssh>        ansible_ssh_user=<user, ex: ubuntu>
+<hotsname or ip>  ansible_connection=<connection type, ex: ssh>  ansible_ssh_user=<user, ex: ubuntu>

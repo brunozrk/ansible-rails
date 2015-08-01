@@ -15,7 +15,7 @@ Considerando que o Python esteja instalado. Instale o pip e o ansible
 
 Para provisionar o ambiente, execute o arquivo playbook.yml
 
-    ansible-playbook -i hosts playbook.yml
+    ansible-playbook playbook.yml
 
 # License
 
