@@ -9,6 +9,16 @@
   tags:
     - shared_configs
 
+- name: Create symlink to app
+  file: >
+    src=/var/www/{{ app_name }}
+    dest={{ app_name }}
+    state=link
+    force=yes
+  tags:
+    - shared_configs
+    - symlink
+
 - name: Create database.yml
   template: >
     src=database.yml.j2
